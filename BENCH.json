@@ -1,0 +1,565 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "VEHICLE_TRACKER",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\AUTOMOTIVE\\VEHICLE_TRACKER\\UPSTREAM_CLONE",
+  "git": {
+   "head": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE",
+   "url": "https://github.com/the-anticloud/OPENMRS_CORE.git",
+   "branch": "master",
+   "committed_at": "2026-09-29T11:06:59+04:00",
+   "sha_verified_from": "local clone .git file read (no .git dir in clone)"
+  }
+ },
+ "metrics": {
+  "files_total": 667,
+  "source_files_scanned": 378,
+  "lines_of_code": 64358,
+  "languages": {
+   ".cs": 258,
+   ".js": 122,
+   ".cshtml": 121,
+   ".ts": 89,
+   ".png": 17,
+   ".css": 13,
+   ".map": 11,
+   ".webp": 7,
+   ".json": 5,
+   "(none)": 4,
+   ".md": 4,
+   ".yml": 3,
+   ".txt": 3,
+   ".cjs": 3,
+   ".ico": 2
+  }
+ },
+ "licence": {
+  "spdx": "MIT",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 0,
+  "unique": 0,
+  "by_ecosystem": {},
+  "list": []
+ },
+ "owasp_top10": {
+  "total_findings": 55,
+  "files_with_findings": 48,
+  "severity": {
+   "high": 17,
+   "medium": 1,
+   "low": 37
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 1,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "Helper/StaticHelper.cs",
+      "line": 947,
+      "cwe": "CWE-327",
+      "snippet": "var calendarUID = new Guid(MD5.HashData(Encoding.UTF8.GetBytes($\"{dtStart}_{reminder.Description}\")));"
+     }
+    ]
+   },
+   "A03-Injection": {
+    "count": 17,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "line": 349,
+      "cwe": "CWE-95",
+      "snippet": "match = new RegExp(params).exec(value);"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/lib/chart-js/chart.umd.js",
+      "line": 13,
+      "cwe": "CWE-95",
+      "snippet": "*/function _t(t){return t+.5|0}const yt=(t,e,i)=>Math.max(Math.min(t,i),e);function vt(t){return yt(_t(2.55*t),0,255)}function Mt(t){return yt(_t(255*t),0,255)}function wt(t){retur"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/lib/bootstrap-tagsinput/bootstrap-tagsinput.js",
+      "line": 37,
+      "cwe": "CWE-78",
+      "snippet": "this.$element = $(element);"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/lib/bootstrap-datepicker/js/bootstrap-datepicker.js",
+      "line": 102,
+      "cwe": "CWE-78",
+      "snippet": "this.element = $(element);"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/garage.js",
+      "line": 196,
+      "cwe": "CWE-78",
+      "snippet": "if ($(sender).hasClass(\"bg-primary\")) {"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/gasrecord.js",
+      "line": 334,
+      "cwe": "CWE-78",
+      "snippet": "var totalMilesTraveled = rowMPG.length > 0 ? rowsToAggregate.children('[data-gas-type=\"mileage\"]').toArray().map(x => globalParseFloat($(x).attr(\"data-gas-aggregate\"))).reduce((a, "
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/inspectionrecord.js",
+      "line": 48,
+      "cwe": "CWE-78",
+      "snippet": "$(e).closest('[data-type=\"field\"]').remove();"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/kiosk.js",
+      "line": 3,
+      "cwe": "CWE-78",
+      "snippet": "let vehicleId = $(sender).attr('data-vehicleId');"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/planrecord.js",
+      "line": 280,
+      "cwe": "CWE-78",
+      "snippet": "$(sender).addClass('dragover');"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/reminderrecord.js",
+      "line": 323,
+      "cwe": "CWE-78",
+      "snippet": "if ($(sender).hasClass(\"bg-primary\")) {"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/reports.js",
+      "line": 14,
+      "cwe": "CWE-78",
+      "snippet": "if ($(this).hasClass('column-default')) {"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/serversettings.js",
+      "line": 46,
+      "cwe": "CWE-78",
+      "snippet": "let pageArray = $(\".setup-wizard-content\").map((index, elem) => parseInt($(elem).attr('data-page'))).toArray();"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/settings.js",
+      "line": 250,
+      "cwe": "CWE-78",
+      "snippet": "var translationKey = $(elem).find('.translation-key');"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/shared.js",
+      "line": 3,
+      "cwe": "CWE-78",
+      "snippet": "return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/supplyrecord.js",
+      "line": 147,
+      "cwe": "CWE-78",
+      "snippet": "$(elem).prop('checked', true);"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/swigarette.js",
+      "line": 2,
+      "cwe": "CWE-78",
+      "snippet": "let headerElem = $(sender);"
+     },
+     {
+      "severity": "high",
+      "file": "wwwroot/js/vehicle.js",
+      "line": 619,
+      "cwe": "CWE-78",
+      "snippet": "text: $(this).attr(\"data-description\")"
+     }
+    ]
+   },
+   "A04-InsecureDesign": {
+    "count": 31,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/chart-js/core/core.datasetController.d.ts",
+      "line": 197,
+      "cwe": "CWE-",
+      "snippet": "* @todo v4, rename to getSharedOptions and remove excess functions"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/bootstrap-tagsinput/bootstrap-tagsinput.js",
+      "line": 285,
+      "cwe": "CWE-",
+      "snippet": "// HACK: only process on focusout when no typeahead opened, to"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/js/odometerrecord.js",
+      "line": 12,
+      "cwe": "CWE-",
+      "snippet": "function showEditOdometerRecordModal(odometerRecordId, nocache) {"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/js/planrecord.js",
+      "line": 301,
+      "cwe": "CWE-",
+      "snippet": "<input type=\"text\" inputmode=\"numeric\" id=\"inputOdometer\" class=\"swal2-input\" placeholder=\"Odometer Reading\" onkeydown=\"handleSwalEnter(event)\">"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/js/shared.js",
+      "line": 101,
+      "cwe": "CWE-",
+      "snippet": "var vehicleOdometerOptional = $(\"#inputOdometerOptional\").is(\":checked\");"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/js/vehicle.js",
+      "line": 132,
+      "cwe": "CWE-",
+      "snippet": "$.get(`/Vehicle/GetOdometerRecordsByVehicleId?vehicleId=${vehicleId}`, function (data) {"
+     },
+     {
+      "severity": "low",
+      "file": "Models/Kiosk/KioskReminderViewModel.cs",
+      "line": 6,
+      "cwe": "CWE-",
+      "snippet": "public int CurrentOdometer { get; set; }"
+     },
+     {
+      "severity": "low",
+      "file": "Logic/OdometerLogic.cs",
+      "line": 8,
+      "cwe": "CWE-",
+      "snippet": "int GetLastOdometerRecordMileage(int vehicleId, List<OdometerRecord> odometerRecords);"
+     },
+     {
+      "severity": "low",
+      "file": "Logic/VehicleLogic.cs",
+      "line": 95,
+      "cwe": "CWE-",
+      "snippet": "OdometerRecords = _odometerRecordDataAccess.GetOdometerRecordsByVehicleId(vehicleId),"
+     },
+     {
+      "severity": "low",
+      "file": "Helper/ReportHelper.cs",
+      "line": 8,
+      "cwe": "CWE-",
+      "snippet": "IEnumerable<CostForVehicleByMonth> GetOdometerRecordSum(List<OdometerRecord> odometerRecords, int year = 0, bool sortIntoYear = false);"
+     },
+     {
+      "severity": "low",
+      "file": "Helper/StaticHelper.cs",
+      "line": 980,
+      "cwe": "CWE-",
+      "snippet": "double range = Convert.ToDouble(max - min);"
+     },
+     {
+      "severity": "low",
+      "file": "External/Interfaces/IOdometerRecordDataAccess.cs",
+      "line": 7,
+      "cwe": "CWE-",
+      "snippet": "public List<OdometerRecord> GetOdometerRecordsByVehicleId(int vehicleId);"
+     },
+     {
+      "severity": "low",
+      "file": "External/Implementations/Postgres/OdometerRecordDataAccess.cs",
+      "line": 31,
+      "cwe": "CWE-",
+      "snippet": "public List<OdometerRecord> GetOdometerRecordsByVehicleId(int vehicleId)"
+     },
+     {
+      "severity": "low",
+      "file": "External/Implementations/Litedb/OdometerRecordDataAccess.cs",
+      "line": 16,
+      "cwe": "CWE-",
+      "snippet": "public List<OdometerRecord> GetOdometerRecordsByVehicleId(int vehicleId)"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/VehicleController.cs",
+      "line": 373,
+      "cwe": "CWE-",
+      "snippet": "var results = _odometerRecordDataAccess.GetOdometerRecordsByVehicleId(vehicleId);"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/EquipmentController.cs",
+      "line": 17,
+      "cwe": "CWE-",
+      "snippet": "var odometerRecords = _odometerRecordDataAccess.GetOdometerRecordsByVehicleId(vehicleId);"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/GasController.cs",
+      "line": 64,
+      "cwe": "CWE-",
+      "snippet": "_odometerLogic.AutoInsertOdometerRecord(new OdometerRecord"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/ImportController.cs",
+      "line": 398,
+      "cwe": "CWE-",
+      "snippet": "var vehicleRecords = _odometerRecordDataAccess.GetOdometerRecordsByVehicleId(vehicleId);"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/InspectionController.cs",
+      "line": 220,
+      "cwe": "CWE-",
+      "snippet": "_odometerLogic.AutoInsertOdometerRecord(new OdometerRecord"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/OdometerController.cs",
+      "line": 18,
+      "cwe": "CWE-",
+      "snippet": "var result = _odometerRecordDataAccess.GetOdometerRecordsByVehicleId(vehicleId);"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/PlanController.cs",
+      "line": 350,
+      "cwe": "CWE-",
+      "snippet": "_odometerLogic.AutoInsertOdometerRecord(new OdometerRecord"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/RepairController.cs",
+      "line": 64,
+      "cwe": "CWE-",
+      "snippet": "_odometerLogic.AutoInsertOdometerRecord(new OdometerRecord"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/ReportController.cs",
+      "line": 47,
+      "cwe": "CWE-",
+      "snippet": "allCosts.AddRange(_reportHelper.GetOdometerRecordSum(odometerRecords, 0));"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/ServiceController.cs",
+      "line": 64,
+      "cwe": "CWE-",
+      "snippet": "_odometerLogic.AutoInsertOdometerRecord(new OdometerRecord"
+     },
+     {
+      "severity": "low",
+      "file": "Controllers/Vehicle/UpgradeController.cs",
+      "line": 64,
+      "cwe": "CWE-",
+      "snippet": "_odometerLogic.AutoInsertOdometerRecord(new OdometerRecord"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 0,
+    "findings": []
+   },
+   "A06-VulnerableComponents": {
+    "count": 0,
+    "findings": []
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 6,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/qrcode/qrcode.js",
+      "line": 7,
+      "cwe": "CWE-319",
+      "snippet": "// URL: http://www.d-project.com/"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "line": 40,
+      "cwe": "CWE-319",
+      "snippet": "// As mentioned on http://api.jquery.com/category/selectors/"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/chart-js/types/utils.d.ts",
+      "line": 4,
+      "cwe": "CWE-319",
+      "snippet": "// Copyright (c) 2016 Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io)"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/chart-js/helpers/helpers.easing.d.ts",
+      "line": 4,
+      "cwe": "CWE-319",
+      "snippet": "* @see http://www.robertpenner.com/easing/"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/chart-js/chunks/helpers.segment.js",
+      "line": 674,
+      "cwe": "CWE-319",
+      "snippet": "* @see http://www.robertpenner.com/easing/"
+     },
+     {
+      "severity": "low",
+      "file": "wwwroot/lib/bootstrap-tagsinput/bootstrap-tagsinput.js",
+      "line": 538,
+      "cwe": "CWE-319",
+      "snippet": "* http://flightschool.acylt.com/devnotes/caret-position-woes/"
+     }
+    ]
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 4,
+  "files_with_findings": 4,
+  "severity": {
+   "high": 0,
+   "medium": 4,
+   "low": 0
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 4,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "wwwroot/js/inspectionrecord.js",
+      "line": 103,
+      "cwe": "CWE-1336",
+      "snippet": "function getAndValidateInspectionRecordTemplate() {"
+     },
+     {
+      "severity": "medium",
+      "file": "wwwroot/js/planrecord.js",
+      "line": 139,
+      "cwe": "CWE-1336",
+      "snippet": "function usePlannerRecordTemplate(planRecordTemplateId) {"
+     },
+     {
+      "severity": "medium",
+      "file": "Controllers/Vehicle/PlanController.cs",
+      "line": 182,
+      "cwe": "CWE-1336",
+      "snippet": "public IActionResult ConvertPlanRecordToPlanRecordTemplate(int planRecordId)"
+     },
+     {
+      "severity": "medium",
+      "file": "Controllers/Vehicle/SupplyController.cs",
+      "line": 99,
+      "cwe": "CWE-1336",
+      "snippet": "public IActionResult GetSupplyRecordsForPlanRecordTemplate(int planRecordTemplateId)"
+     }
+    ]
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM09-Misinformation": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:bfc6d388-fa57-5cbe-95fb-cf976352a7c3",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-06T09:16:57Z",
+   "component": {
+    "type": "application",
+    "name": "VEHICLE_TRACKER",
+    "version": "83b357604d34",
+    "bom-ref": "pkg:generic/anticloud/VEHICLE_TRACKER@83b357604d34",
+    "purl": "pkg:generic/anticloud/VEHICLE_TRACKER@83b357604d34",
+    "licenses": [
+     {
+      "license": {
+       "id": "MIT"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": []
+ },
+ "elapsed_seconds": 29.37
+}
