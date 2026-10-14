@@ -1,0 +1,10 @@
+{
+  "project": "VEHICLE_TRACKER",
+  "category": "AUTOMOTIVE",
+  "path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\AUTOMOTIVE\\VEHICLE_TRACKER",
+  "status": "failed",
+  "reason": "no 40-hex git HEAD SHA (head='REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE'; sanitized clone or .git absent)",
+  "files_count": 667,
+  "lines_of_code": 64358,
+  "sha": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+}
